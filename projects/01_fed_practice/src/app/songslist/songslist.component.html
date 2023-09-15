@@ -1,0 +1,15 @@
+<div>
+    <h2 [hidden]="isDisabled">{{title}} {{counter}}</h2>
+    <button (click)=fade_out()>{{ Toggle_btn }}</button>
+    <h3>{{ sub_title }}</h3>
+    <div>
+        <p *ngFor="let song of songs"> 
+            {{ song.name }}
+        </p>
+        <p>{{ End_title }}
+        <input placeholder="add new song" #txt />
+
+        <button (click)="add_songs_toArray(txt.value)">{{ Add_btn }}</button>
+         </p> 
+    </div>
+</div>

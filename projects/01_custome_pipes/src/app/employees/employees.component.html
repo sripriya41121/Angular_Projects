@@ -1,0 +1,22 @@
+<div>
+    <h2 [hidden]="isDisabled">{{ title }}</h2>
+    <label> Search Filter: </label>
+    <br/><br/>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>gender</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let employee of employees">
+            <td>{{employee.name | employeeFilter:employee.gender}}</td>
+            <td>{{employee.location}}</td>
+            <td>{{employee.gender}}</td>
+
+        </tbody>
+    </table>
+
+    <button (click)=fade_out()>{{ Toggle_btn }}</button>
+</div>

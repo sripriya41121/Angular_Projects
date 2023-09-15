@@ -1,0 +1,20 @@
+<div>
+    <h2>{{ title }}</h2>
+
+    <table style="border: 1px solid" *ngIf="employees && employees.length">
+        <thead>
+            <tr style="border: 1px solid">
+                <th style="border: 1px solid">Name</th>
+                <th style="border: 1px solid">Location</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr style="border: 1px solid" *ngFor="let employee of employees">
+                <td style="border: 1px solid">{{ employee.name }}</td>
+                <td style="border: 1px solid">{{ employee.location }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <h1>{{ title }}</h1>
+  <h2>Test</h2>
+  <ul> 
+    <li>A-Raja</li>
+    <li>A-Sri</li>
+    <li>A-Priya</li>
+  </ul>
+
+  <button style="color:red;" [style.font-weight]="isBold?'bold':'normal'"  [style.font-size.px]="fontSize">Button</button>
+  <button style="color:red;" [ngStyle]="addStyles()">My Button</button>
+
+  <app-employees></app-employees>
+</div>

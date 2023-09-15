@@ -1,0 +1,16 @@
+<div>
+    <h2 [hidden]="isDisabled">{{ sub_title }}{{ songs_counter }}
+    </h2>
+
+    <button (click)=fade_sub_title()>{{ button_title}}</button>
+    <h2>{{ title }}</h2>
+    <div>
+        <p *ngFor="let song of songs">
+            {{ song.name }}
+        </p>
+        <p>{{end_title}}
+            <input placeholder='add new song' #txt>
+            <button (click)=add_song_to_array(txt.value)>{{ add_button}}</button>
+        </p>
+    </div>
+</div>

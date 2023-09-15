@@ -1,0 +1,9 @@
+<div>
+  <h1>{{ title }}</h1><br/>
+  {{counter}}
+
+  <button (click)='incrementCounter()'>Increment Counter </button>
+  <br><br>
+  {{inputData}}<br>
+  <input [value]='inputData' #txt (input)="setInputData(txt.value)">
+</div>
